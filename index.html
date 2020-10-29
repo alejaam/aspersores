@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <title>Aspersores</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="http://placehold.it/150x50?text=IPN - ESIME"
+                        alt="">
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" id="advanced-search-form">
+            <h2>Calculo de carga dinamica total</h2>
+            <form action="aspersores.php" method="POST">
+                <h3>Caudal real</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Cobertura real</label>
+                        <input type="number" class="form-control"
+                            placeholder="Cobertura real" id="cobertura_real"
+                            name="cobertura_real" step=".01">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="densidad_diseno">Densidad de diseño</label>
+                        <input type="text" class="form-control"
+                            placeholder="Densidad de diseño"
+                            id="densidad_diseno"
+                            value="5" name="densidad_diseno" readonly>
+                    </div>
+                </div>
+                <h3>Número de roseadores</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label>Área de operación</label>
+                        <input type="number" class="form-control"
+                            placeholder="Area de operación" id="area_operacion"
+                            name="area_operacion" step=".01">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <button type="submit" class="btn btn-info btn-lg
+                    btn-responsive" id="search"> <span class="glyphicon
+                        glyphicon-search"></span> Search</button>
+            </form>
+        </div>
+    </body>
+</html>
